@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "41387f4a14a6c51497e2cb56a817cfc6"
+name = "product-dasboard"
+handle = "product-dasboard-1"
+application_url = "https://flour-reactions-petite-hazard.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-08123463.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://flour-reactions-petite-hazard.trycloudflare.com/auth/callback",
+  "https://flour-reactions-petite-hazard.trycloudflare.com/auth/shopify/callback",
+  "https://flour-reactions-petite-hazard.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
